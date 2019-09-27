@@ -113,6 +113,12 @@
 ## E.g.
 
 ```html
+<div
+  class="flex flex-flow-row-nowrap justify-content-center align-items-center"
+></div>
+```
+
+```html
 <div class="container">
   <div class="row align-items-flex-end">
     <div class="col col-3 col-mobile-1 col-tablet-2"></div>
