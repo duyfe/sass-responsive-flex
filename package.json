@@ -2,7 +2,7 @@
   "name": "mini-flex-responsive",
   "version": "1.0.0",
   "description": "Make website responsive with flexbox",
-  "main": "index.js",
+  "main": "dist/mini-flex-responsive.min.css",
   "scripts": {
     "compile-sass": "node-sass src/index.scss dist/mini-flex-responsive.min.css --output-style compressed",
     "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' dist/mini-flex-responsive.min.css -o dist/mini-flex-responsive.min.css --map",

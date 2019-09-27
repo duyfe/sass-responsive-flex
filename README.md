@@ -18,6 +18,19 @@
 
 ## Basic Usage
 
+```html
+<link
+  rel="stylesheet"
+  href="/node_modules/mini-flex-responsive/dist/mini-flex-responsive.min"
+/>
+```
+
+Or `import` sass file to your project
+
+```scss
+@import '/node_modules/mini-flex-responsive/mini-flex-responsive.scss';
+```
+
 ### Flex
 
 #### Variables
