@@ -1,0 +1,26 @@
+@import './components/variables';
+@import './components/sass-mq';
+
+.container {
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
+
+  width: map-get($map: $container-width, $key: 'mobile');;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+
+  @include onTablet() {
+    width: map-get($map: $container-width, $key: 'tablet');
+  }
+
+  @include onDesktop() {
+    width: map-get($map: $container-width, $key: 'desktop');;
+  }
+
+  @include onWide() {
+    width: map-get($map: $container-width, $key: 'wide');;
+  }
+}

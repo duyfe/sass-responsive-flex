@@ -1,0 +1,74 @@
+@import '~sass-mq';
+@import './variables';
+
+@mixin onMobile() {
+  @include mq($from: mobile, $until: tablet) {
+    /**
+     * On Mobile
+     */
+    @content;
+  }
+}
+
+@mixin onMobileLandscape() {
+  @include mq($from: mobile, $until: tablet, $and: '(orientation: landscape)') {
+    /**
+     * On Mobile landscape
+     */
+    @content;
+  }
+}
+
+@mixin onTablet() {
+  @include mq($from: tablet, $until: desktop) {
+    /**
+     * On Tablet
+     */
+    @content;
+  }
+}
+
+@mixin onTabletLandscape() {
+  @include mq($from: tablet, $until: desktop, $and: '(orientation: landscape)') {
+    /**
+     * On Tablet landscape
+     */
+    @content;
+  }
+}
+
+@mixin fromTablet() {
+  @include mq($from: tablet) {
+    /**
+     * from tablet
+     */
+    @content;
+  }
+}
+
+@mixin onDesktop() {
+  @include mq($from: desktop, $until: wide) {
+    /**
+     * On Desktop
+     */
+    @content;
+  }
+}
+
+@mixin fromDesktop() {
+  @include mq($from: desktop) {
+    /**
+     * from desktop
+     */
+    @content;
+  }
+}
+
+@mixin onWide() {
+  @include mq($from: wide) {
+    /**
+     * On Wide device
+     */
+    @content;
+  }
+}
