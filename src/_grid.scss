@@ -22,29 +22,13 @@
   padding-right: $gutter/2;
 }
 
-@each $var in $justify-contents {
-  .row {
-    &.justify-content-#{$var} {
-      @include justify-content($var);
-    }
-  }
-}
-
-@each $var in $align-items {
-  .row {
-    &.align-items-#{$var} {
-      @include align-items($var);
-    }
-  }
-}
-
 @for $var from 1 to $max-col {
   .col-#{$var} {
     width: calc(100% / #{$var} - #{$gutter});
   }
 }
 
-@each $point in $breakpoints {
+@each $point in $breakdevices {
   @for $var from 1 to $max-col {
     .col-#{$point}-#{$var} {
       @if ($point == 'mobile') {

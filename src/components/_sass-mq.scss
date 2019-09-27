@@ -1,5 +1,5 @@
-@import '~sass-mq';
-@import './variables';
+@import "../../node_modules/sass-mq/mq";
+@import "./variables";
 
 @mixin onMobile() {
   @include mq($from: mobile, $until: tablet) {
@@ -11,7 +11,7 @@
 }
 
 @mixin onMobileLandscape() {
-  @include mq($from: mobile, $until: tablet, $and: '(orientation: landscape)') {
+  @include mq($from: mobile, $until: tablet, $and: "(orientation: landscape)") {
     /**
      * On Mobile landscape
      */
@@ -29,7 +29,7 @@
 }
 
 @mixin onTabletLandscape() {
-  @include mq($from: tablet, $until: desktop, $and: '(orientation: landscape)') {
+  @include mq($from: tablet, $until: desktop, $and: "(orientation: landscape)") {
     /**
      * On Tablet landscape
      */

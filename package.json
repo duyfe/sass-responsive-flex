@@ -1,0 +1,121 @@
+{
+  "name": "mini-flex-responsive",
+  "version": "1.0.0",
+  "description": "Make website responsive with flexbox",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass src/index.scss dist/mini-flex-responsive.min.css --output-style compressed",
+    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' dist/mini-flex-responsive.min.css -o dist/mini-flex-responsive.min.css --map",
+    "remove-map": "rm -rf dist/*.map",
+    "build": "npm run compile-sass && npm run prefix-css && npm run remove-map",
+    "test": "stylelint src/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duyfe/sass-responsive-flex.git"
+  },
+  "keywords": [
+    "mini-flex-responsive",
+    "responsive",
+    "flexbox"
+  ],
+  "author": {
+    "name": "Duy Pham",
+    "email": "ngocduyfe@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duyfe/sass-responsive-flex/issues"
+  },
+  "homepage": "https://github.com/duyfe/sass-responsive-flex#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.3",
+    "stylelint": "^11.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "husky": "^3.0.5",
+    "postcss": "^7.0.18",
+    "sass-mq": "^5.0.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-no-vendor-prefix": null,
+      "at-rule-no-unknown": null,
+      "at-rule-whitelist": [
+        "import",
+        "media",
+        "mixin",
+        "include"
+      ],
+      "color-named": "always-where-possible",
+      "custom-media-pattern": "^([a-z]+-?)*([a-z]+)$",
+      "custom-property-pattern": "^([a-z]+-?)*([a-z]+)$",
+      "declaration-block-no-duplicate-properties": null,
+      "font-family-name-quotes": "always-where-recommended",
+      "font-weight-notation": "numeric",
+      "function-url-quotes": "always",
+      "function-whitelist": [
+        "color",
+        "counter",
+        "hsla"
+      ],
+      "media-feature-name-no-vendor-prefix": true,
+      "no-descending-specificity": true,
+      "no-duplicate-selectors": true,
+      "order/properties-alphabetical-order": true,
+      "property-blacklist": [
+        "float"
+      ],
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "composes"
+          ]
+        }
+      ],
+      "property-no-vendor-prefix": null,
+      "selector-class-pattern": "^([a-z]+[a-zA-Z]*|ng-[a-z]+(-[a-z]+)*)$",
+      "selector-max-attribute": 0,
+      "selector-max-specificity": "0,4,0",
+      "selector-max-type": 0,
+      "selector-max-universal": 0,
+      "selector-no-vendor-prefix": true,
+      "selector-pseudo-class-whitelist": [
+        "hover",
+        "focus",
+        "global"
+      ],
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "global"
+          ]
+        }
+      ],
+      "string-quotes": "double",
+      "unit-whitelist": [
+        "%",
+        "px",
+        "em",
+        "vh"
+      ],
+      "value-no-vendor-prefix": null
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}
