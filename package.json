@@ -1,11 +1,11 @@
 {
-  "name": "mini-flex-responsive",
+  "name": "flex-responsive",
   "version": "1.0.1",
   "description": "Make website responsive with flexbox",
-  "main": "dist/mini-flex-responsive.min.css",
+  "main": "dist/flex-responsive.min.css",
   "scripts": {
-    "compile-sass": "node-sass src/index.scss dist/mini-flex-responsive.min.css --output-style compressed",
-    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' dist/mini-flex-responsive.min.css -o dist/mini-flex-responsive.min.css --no-map",
+    "compile-sass": "node-sass src/index.scss dist/flex-responsive.min.css --output-style compressed",
+    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' dist/flex-responsive.min.css -o dist/flex-responsive.min.css --no-map",
     "build": "npm run compile-sass && npm run prefix-css",
     "test": "stylelint src/**/*.scss"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/duyfe/sass-responsive-flex.git"
   },
   "keywords": [
-    "mini-flex-responsive",
+    "flex-responsive",
     "responsive",
     "flexbox"
   ],

@@ -1,4 +1,4 @@
-# Mini Flex Responsive
+# Flex Responsive
 
 ## OS Compatibility
 
