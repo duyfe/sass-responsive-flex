@@ -5,20 +5,20 @@ $mq-breakpoints: (
   tablet:  740px,
   desktop: 980px,
   wide:    1300px
-);
-$breakdevices: mobile, tablet, desktop, wide;
+) !default;
+$breakdevices: mobile, tablet, desktop, wide !default;
 $container-width: (
   mobile: 100%,
   tablet: 720px,
   desktop: 960px,
   wide: 1200px
-);
+) !default;
 
 //grid
-$justify-contents: flex-start, center, flex-end, space-between, space-around, space-evenly;
-$align-items: flex-start, flex-end, center, baseline, stretch;
-$flex-direction: row, row-reverse, column, column-reverse;
-$flex-wrap: nowrap, wrap, wrap-reverse;
-$justify-content: flex-start, flex-end, center, space-between, space-around;
-$gutter: 30px;
-$max-col: 12;
+$justify-contents: flex-start, center, flex-end, space-between, space-around, space-evenly !default;
+$align-items: flex-start, flex-end, center, baseline, stretch !default;
+$flex-direction: row, row-reverse, column, column-reverse !default;
+$flex-wrap: nowrap, wrap, wrap-reverse !default;
+$justify-content: flex-start, flex-end, center, space-between, space-around !default;
+$gutter: 30px !default;
+$max-col: 12 !default;

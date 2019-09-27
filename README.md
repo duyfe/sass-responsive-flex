@@ -21,15 +21,17 @@
 ```html
 <link
   rel="stylesheet"
-  href="/node_modules/mini-flex-responsive/dist/mini-flex-responsive.min"
+  href="/node_modules/mini-flex-responsive/dist/mini-flex-responsive.min.css"
 />
 ```
 
-Or `import` sass file to your project
+- Or `import` sass file to your project
 
 ```scss
-@import '/node_modules/mini-flex-responsive/mini-flex-responsive.scss';
+@import '/node_modules/mini-flex-responsive/src/index.scss';
 ```
+
+- Then `overide` your variables.
 
 ### Flex
 
