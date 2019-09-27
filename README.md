@@ -1,4 +1,4 @@
-# Sass Responsive
+# Mini Flex Responsive
 
 ## OS Compatibility
 
